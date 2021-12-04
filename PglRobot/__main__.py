@@ -101,9 +101,9 @@ And the following:
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
 )
 
-mafiabot_IMG = "https://telegra.ph/file/724efa744a71e6a545eb0.jpg"
+PglRobot_IMG = "https://telegra.ph/file/724efa744a71e6a545eb0.jpg"
 
-mafiamunde_IMG = "https://telegra.ph/file/724efa744a71e6a545eb0.jpg"
+PglRobotG_IMG = "https://telegra.ph/file/724efa744a71e6a545eb0.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project by contacting [harsh](https://t.me/godharsh_xd).
@@ -215,7 +215,7 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_photo(
-                mafiabot_IMG,
+                PglRobot_IMG,
                 PM_START_TEXT.format(
                     escape_markdown(first_name), escape_markdown(context.bot.first_name)
                 ),
@@ -252,7 +252,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-            mafiamunde_IMG,
+            PglRobotG_IMG,
             G_START_TEXT.format(uptime),
         )
 
@@ -628,7 +628,7 @@ def main():
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
             dispatcher.bot.sendMessage(
-                f"@{SUPPORT_CHAT}", "PglRobot now ready to work!"
+                f"@{SUPPORT_CHAT}", "mafiamunde GROUPMANAGER now ready to work!"
             )
         except Unauthorized:
             LOGGER.warning(
