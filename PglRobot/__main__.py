@@ -77,13 +77,13 @@ Hi {}, my name is {}!
 I am a  Powerfull  group management bot. You can find my list of available commands with /help.
 """
 G_START_TEXT = """
-Hello PglRobot Is In The Chat.
+Hello MafiamundeBot Is In The Chat.
 Uptime - {}!
 """
 
 HELP_STRINGS = """
 Hey there! My name is *{}*.
-I'm a Heroine For Fun and help admins to manage their groups! Have a look at the following for an idea of some of \
+I'm a Hero For Fun and help admins to manage their groups! Have a look at the following for an idea of some of \
 the things I can help you with.
 *Main* commands available:
  • /help: PM's you this message.
@@ -101,14 +101,13 @@ And the following:
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
 )
 
-PglRobot_IMG = "https://telegra.ph/file/f1d7b30b05ba9f0dbf4e5.jpg"
+mafiabot_IMG = "https://telegra.ph/file/724efa744a71e6a545eb0.jpg"
 
-PglRobotG_IMG = "https://telegra.ph/file/e8881931bc000c75e8f13.jpg"
+mafiamunde_IMG = "https://telegra.ph/file/724efa744a71e6a545eb0.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting [Gaurav Verma](https://t.me/iisgaurav).
- Using [PayPal](paypal.me/iisgaurav).
- Those who cannot provide monetary support are welcome to help us develop the bot at @VegaCodes.
+ You can support the project by contacting [harsh](https://t.me/godharsh_xd).
+ Those who cannot provide monetary support are welcome to help us develop the bot at @mafia_x_chat.
  """
 
 IMPORTED = {}
@@ -216,7 +215,7 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_photo(
-                PglRobot_IMG,
+                mafiabot_IMG,
                 PM_START_TEXT.format(
                     escape_markdown(first_name), escape_markdown(context.bot.first_name)
                 ),
@@ -226,7 +225,7 @@ def start(update: Update, context: CallbackContext):
                     [
                         [
                             InlineKeyboardButton(
-                                text="ADD ME IN YOUR GROUP ⚡️",
+                                text="ADD ME IN YOUR GROUP 😎",
                                 url="t.me/{}?startgroup=true".format(
                                     context.bot.username
                                 ),
@@ -234,12 +233,12 @@ def start(update: Update, context: CallbackContext):
                         ],
                         [
                             InlineKeyboardButton(
-                                text="SUPPORT ⚡️",
+                                text="SUPPORT CHAT ⚡️",
                                 url=f"https://t.me/{SUPPORT_CHAT}",
                             ),
                             InlineKeyboardButton(
-                                text="UPDATES ⚡️",
-                                url="https://t.me/VCUpdates",
+                                text="CLICK FOR UPDATES⚡️",
+                                url="https://t.me/mafia_x_network",
                             ),
                         ],
                         [
@@ -253,7 +252,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-            PglRobotG_IMG,
+            mafiamunde_IMG,
             G_START_TEXT.format(uptime),
         )
 
