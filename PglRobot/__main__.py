@@ -77,7 +77,7 @@ Hi {}, my name is {}!
 I am a  Powerfull  group management bot. You can find my list of available commands with /help.
 """
 G_START_TEXT = """
-Hello PglRobot Is In The Chat.
+Hello MAFIAMUNDE GROUPMANAGER BOT Is In The Chat.
 Uptime - {}!
 """
 
@@ -101,13 +101,13 @@ And the following:
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
 )
 
-PglRobot_IMG = "https://telegra.ph/file/f1d7b30b05ba9f0dbf4e5.jpg"
+PglRobot_IMG = "https://telegra.ph/file/724efa744a71e6a545eb0.jpg"
 
-PglRobotG_IMG = "https://telegra.ph/file/e8881931bc000c75e8f13.jpg"
+PglRobotG_IMG = "https://telegra.ph/file/724efa744a71e6a545eb0.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting [Gaurav Verma](https://t.me/iisgaurav).
- Using [PayPal](paypal.me/iisgaurav).
+ You can support the project by contacting [HARSH](https://t.me/godharsh_xd).
+ add members using scrapping[join](https://t.me/mafia_x_chat).
  Those who cannot provide monetary support are welcome to help us develop the bot at @VegaCodes.
  """
 
@@ -122,7 +122,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("PglRobot.modules." + module_name)
+    imported_module = importlib.import_module("mafiamundebot.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -239,7 +239,7 @@ def start(update: Update, context: CallbackContext):
                             ),
                             InlineKeyboardButton(
                                 text="UPDATES ⚡️",
-                                url="https://t.me/VCUpdates",
+                                url="https://t.me/mafia_x_network",
                             ),
                         ],
                         [
@@ -253,7 +253,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-            PglRobotG_IMG,
+            mafiamunde_IMG,
             G_START_TEXT.format(uptime),
         )
 
